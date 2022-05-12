@@ -1,69 +1,32 @@
-# Memory Game
+(ES)
 
-Who hasn't played card games at some point? From a very young age to a beer night with friends, right?
+Hola, para empezar este proyecto, primero hice los diseños en Figma.
+![Screenshot](screenshot.png)
+Luego empece a pensar en como lo haría, tenía en mente hacer un index.html para cada nivel del juego, pero se me hacía muy complicado entrelazar archivos, además de crear diferentes archivos CSS.
+Luego pensé en generar todo en el mismo index.html, y ocultar y mostrar los distintos niveles, pero en el archivo JavaScript se llenó de declaraciones(if).
 
-Well, for this Challenge you will have to choose your favourite theme and recreate
-the [famous game](https://en.wikipedia.org/wiki/Concentration_(card_game)).
+Buscando una manera más limpia, leyendo algunos artículos, me encontré con este 
+https://www.webtips.dev/memory-game-in-javascript
+una forma en la que hizo el juego más limpio y usando emojis para las tarjetas(ya que con imágenes el código se hace demasiado largo, se podría, pero yo andaba buscando algo más limpio), fui investigando el soporte de los emojis en los diferentes navegadores, para no tener problemas.
 
-![Brais Moure Challenge card](moure_memory-game.png)
+Al ver que el soporte era bueno, decidí hacerlo con emojis, en el artículo describen además una manera de cambiar aleatoriamente los emojis, sin pensarlo decidí llevarlo a código, tuve algunos problemas en el camino, uno de los que más me llevo trabajo fue trabajando en el diseño responsivo para móviles, ya que el tamaño lo pone JavaScript, y no podía modificarlo con CSS, luego de mucha investigación, hice una función para que al cambio de tamaño de pantalla las tarjetas cambien de tamaño (sin CSS), y así logre que el tamaño de las tarjetas cambien!
 
-> This is a challenge created by [MoureDev](https://www.twitch.tv/mouredev). He will review and give feedback to some
-> proposed solutions from the community in one of his Twitch livestreams 😻 
+Sobre la base del artículo, mejore y añadí un montón de cosas, haciéndolo más a mi estilo y los requerimientos del proyecto,
+trate de reducir el código lo máximo posible para que sea entendible.
 
-**Surprise us! 😉**
 
-## How it works?
+(EN)
 
-The requirements for the game are pretty simple. First, you have to choose whatever theme you want to, like
-Pokémon, Star Wars or even Peppa Pig!
+Hello, to start this project, I first made the designs in Figma.
+![Screenshot](screenshot.png)
+Then I started to think about how I would do it, I had in mind to make an index.html for each level of the game, but it was very difficult for me to intertwine files, in addition to creating different CSS files.
+Then I thought about generating everything in the same index.html, and hiding and showing the different levels, but in the JavaScript file it was full of (if) statements.
 
-The dynamics of the game will consist of presenting a board with a series of face-down cards and revealing all the pairs
-before the time is up. The user will tap on each card to turn it over and, if two of them match when they are uncovered,
-they will be turned face up. If not, they will be hidden again.
+Searching for a cleaner way, reading some articles, I came across this
+https://www.webtips.dev/memory-game-in-javascript
+a way in which it made the game cleaner and using emojis for the cards (because with images the code becomes too long, it could, but I was looking for something cleaner), I was investigating the support of emojis in the different browsers, to avoid problems.
 
-**The game is won if all pairs are uncovered within the time limit.**
+Seeing that the support was good, I decided to do it with emojis, in the article they also describe a way to randomly change the emojis, without thinking about it I decided to take it to code, I had some problems along the way, one of the ones that took me the most work was working in the mobile responsive design, since the size is set by JavaScript, and I couldn't modify it with CSS, after a lot of research, I made a function so that when the screen size is changed, the cards change size (without CSS), and so on make the size of the cards change!
 
-So, the game will have an initial screen to select one of the three difficulties and 1 minute to solve each board:
-
-* Easy: 4x4 board
-* Medium: 4x6 board (or 6x4 depending on the screen)
-* Difficult: 5x6 board (or 6x5 depending on screen)
-
-The application will have a main game screen that contains the following elements:
-
-* Game board. The board where the user will play and see the cards.
-* Move counter. Every time 2 cards are turned over it will increase by 1, whether you hit or not.
-* Time counter. A 1-min countdown to reveal all pairs!
-* Remaining pairs counter.
-* A button to return to the level selection screen.
-
-## Technical requirements
-
-* Create a **clean**, **maintainable** and **well-designed** code. We expect to see a good and clear architecture that
-  allows to add or modify the solution without so much troubles.
-* **Test** your code until you are comfortable with it. We don't expect a 100% of Code Coverage but some tests that
-  helps to have a more stable and confident base code.
-
-To understand how you take decisions during the implementation, **please write a COMMENTS.md** file explaining some of
-the most important parts of the application. You would also be able to defend your code through
-[Rviewer](https://rviewer.io), once you submit your solution.
-
----
-
-## How to submit your solution
-
-* Push your code to the `devel` branch - we encourage you to commit regularly to show your thinking process was.
-* **Create a new Pull Request** to `main` branch & **merge it**.
-
-Once merged you **won't be able to change or add** anything to your solution, so double-check that everything is as you
-expected!
-
-Remember that **there is no countdown**, so take your time and implement a solution that you are proud!
-
---- 
-
-<p align="center">
-  If you have any feedback or problem, <a href="mailto:help@rviewer.io">let us know!</a> 🤘
-  <br><br>
-  Made with ❤️ by <a href="https://rviewer.io">Rviewer</a>
-</p>
+Based on the article, I improved and added a lot of things, making it more to my style and the requirements of the project,
+try to reduce the code as much as possible to make it understandable.
