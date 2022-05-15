@@ -4,6 +4,12 @@ let audio2 = new Audio('audio/click2.mp3');
 audio.volume = 0.1;
 audio2.volume = 0.1;
 
+/* const startEasy = document.querySelector('.startEasy');                    
+const startNormal = document.querySelector('.startNormal');
+const startHard = document.querySelector('.startHard');
+const reload = document.querySelector('.reload');
+const pairs = document.querySelector('.pairs');
+ */
 const                                                                                                /*almacenando clases en constantes*/
         startEasy = document.querySelector('.startEasy'),    
         startNormal = document.querySelector('.startNormal'),
@@ -20,7 +26,7 @@ const                                                                           
         win = document.querySelector('.win'),
         card = document.querySelectorAll('.cardFront'),
         cardBack = document.querySelector('.cardBack')
-
+        card = document.querySelectorAll('.cardFront')
 
 const state = {                                                                         //un objeto que contiene todos los datos del juego
     flippedCards: 0,
@@ -45,6 +51,9 @@ startEasy.addEventListener('click', () => {                                     
 
 startNormal.addEventListener('click', () => {
     audio2.play();
+});
+
+startNormal.addEventListener('click', () => {
     if(window.matchMedia("(max-width: 720px)").matches){
         generator(6, 4, figures1)
     }else{
@@ -192,6 +201,7 @@ function generator(rows, files, figures){
 
     const attachEventListeners = () => {                                                                    //attachEventListeners trabaja con la interacción en el DOM y añade los eventListeners a cada tarjeta
         document.addEventListener('click', (e) => {
+        document.addEventListener('click', (e) => {                                                         
             const eventTarget = e.target
             const eventParent = eventTarget.parentElement                                                   //eventParent almacena el nombre del padre del elemento que se ha pulsado
     
@@ -229,8 +239,6 @@ back.addEventListener('click', () => {                                          
 window.addEventListener('resize', () => {                                                                   //esto es un apoyo al diseño responsive
     location.reload();
 });
-
-
 
 console.log(                                                                                                //nada que ver aquí xd
     '%cCURIOSITY KILLED THE CAT :p',
